@@ -26,18 +26,11 @@ AuthorSchema
   return '/catalog/author/' + this._id;
 });
 
-//format birth date
+// Virtual for author's lifespan
 AuthorSchema
-.virtual('formatted_birth_date')
+.virtual('lifespan')
 .get(function () {
-  return this.date_of_birth ? moment(this.date_of_birth).format('YYYY-MM-DD') : '';
-});
-
-//format death date
-AuthorSchema
-.virtual('formatted_death_date')
-.get(function () {
-  return this.date_of_death ? moment(this.date_of_death).format('YYYY-MM-DD') : '';
+  return (this.date_of_birth ? moment(this.date_of_birth).format('Do MMM YYYY') : '') + ' - ' + (this.date_of_death ? moment(this.date_of_death).format('Do MMM YYYY') : '');
 });
 
 //Export model
