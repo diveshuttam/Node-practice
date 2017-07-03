@@ -5,3 +5,6 @@ Most of the code is from [MDN tutorial](https://developer.mozilla.org/en-US/docs
 Also tried deploying the library website and is hosted at https://explibrary.herokuapp.com/  
 Note that the deployed site is different from code and doesn't have update/delete access.  
 The database used is MangoDB and is hosted at [mLab](https://mlab.com/)
+  
+   
+![library](./express-locallibrary-tutorial/libhome.png)
